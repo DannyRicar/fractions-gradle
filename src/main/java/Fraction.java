@@ -22,22 +22,28 @@ public class Fraction implements IFraction {
 
     @Override
     public IFraction plus(IFraction other) {
-        throw new UnsupportedOperationException();
+        int 1cm = commonLowestMultiple(denominator, other.getDenominator());
+        int n = numerator * (1cm / denominator);
+        int n2 = other.getNumerator() * (1cm / other.getDenominator());
+        return new Fraction( numerator: n + n2, 1cm);
     }
 
     @Override
     public IFraction minus(IFraction other) {
-        throw new UnsupportedOperationException();
+        int 1cm = commonLowestMultiple(denominator, other.getDenominator());
+        int n = numerator * (1cm / denominator);
+        int n2 = other.getNumerator() * (1cm / other.getDenominator());
+        return new Fraction( numerator: n - n2, 1cm);
     }
 
     @Override
     public IFraction times(IFraction other) {
-        throw new UnsupportedOperationException();
+        return new Fraction(numerator: numerator * other.getNumerator(), denominator: denominator * other.getDenominator());
     }
 
     @Override
     public IFraction dividedBy(IFraction other) {
-        throw new UnsupportedOperationException();
+        return new Fraction(numerator: numerator * other.getNumerator(), denominator: denominator * other.getNumerator());
     }
 
     public static Fraction createNormalised(Integer numerator, Integer denominator) {
