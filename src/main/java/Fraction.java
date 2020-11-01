@@ -58,3 +58,4 @@ public class Fraction implements IFraction {
     }
 
 }
+
